@@ -40,7 +40,6 @@ pipeline {
         pip install gunicorn
         gunicorn -w 4 application:app -b 0.0.0.0 --daemon
         '''
-          
       } 
     }
   }
