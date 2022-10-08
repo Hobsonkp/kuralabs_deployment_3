@@ -27,6 +27,7 @@ pipeline {
         }
        
       }
+    }
      stage ('Deploy') {
         agent{label 'awsDeploy'}
         steps {
