@@ -37,7 +37,7 @@ pipeline {
         python3 -m venv test3
         source test3/bin/activate
         pip install -r requirements.txt
-        pip install gunicorn flask
+        pip install gunicorn
         gunicorn -w 4 application:app -b 0.0.0.0:5000 --daemon
         '''
       } 
