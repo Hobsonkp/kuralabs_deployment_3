@@ -38,6 +38,7 @@ pipeline {
         source test3/bin/activate
         pip install -r requirements.txt
         pip install gunicorn
+        JENKINS_NODE_COOKIE=stayAlive
         gunicorn -w 4 application:app -b 0.0.0.0:8080 --daemon
         '''
       } 
