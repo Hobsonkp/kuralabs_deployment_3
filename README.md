@@ -16,7 +16,21 @@ Issues:
 There were issues encountered in the initial deployment due to:
 <ol>
 <li>The configuration of the nginx server “/etc/nginx/sites-enabled/default” file. 
+  
+##  INITIAL INSTRUCTIONS:
+  
+      server{
+           listen 5000
+  
+ 
 The errors encountered included requesting browser not being able to access dependencies in subfolder (e.g. css files and js files)
+ 
+##  CORRECTION:
+  
+      server{
+           listen 5000 default_server;
+           listen [::]:5000 default server;
+ 
 <a href="https://github.com/Hobsonkp/kuralabs_deployment_3/blob/main/Documentation/Deployment-3_Assignment%20(1).pdf">(See Deployment_3-Assignment page 11)</a>
 </li>
 <li>The script in the Jenkins file did not successfully allow the application to continue running at the end of a “successful” deployment.
